@@ -1,0 +1,111 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato&display=swap");
+* {
+  box-sizing: border-box;
+}
+body {
+  font-family: "Lato", sans-serif;
+  background-image: url(https://wallpaper.forfun.com/fetch/ec/ec2ff37fdb1ffe9d4c0e9ba704074361.jpeg?w=2500);
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: #222;
+  margin: 0;
+  overflow-x: hidden;
+}
+.container {
+  background-color: #fafafa;
+  min-height: 100hv;
+  width: 100wv;
+  padding: 50px;
+  transform-origin: top left;
+  transition: transform 0.5s linear;
+}
+.container.show-nav {
+  transform: rotate(-20deg);
+}
+.circle-container {
+  position: fixed;
+  top: -100px;
+  left: -100px;
+}
+.circle {
+  background-color: #ff9797;
+  height: 200px;
+  width: 200px;
+  border-radius: 50%;
+  position: relative;
+  transition: transform 0.5s linear;
+}
+.circle button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  height: 100px;
+  background: transparent;
+  border: 0;
+  font-size: 26px;
+  color: #fff;
+  cursor: pointer;
+}
+.circle button:focus {
+  outline: 0;
+}
+.circle button#open {
+  left: 60%;
+}
+.circle button#close {
+  top: 60%;
+  transform: rotate(90deg);
+  transform-origin: top left;
+}
+.container.show-nav .circle {
+  transform: rotate(-70deg);
+}
+.navbar {
+  position: fixed;
+  bottom: 40px;
+  left: 0px;
+}
+.navbar ul {
+  list-style-type: none;
+  padding-left: 30px;
+}
+.navbar ul li {
+  text-transform: uppercase;
+  color: #fff;
+  margin: 40px 0;
+  transition: transform 0.4s ease;
+  transform: translateX(-100%);
+}
+.navbar ul li i {
+  font-size: 20px;
+  margin-right: 10px;
+}
+.navbar ul li + li {
+  margin-left: 15px;
+  transform: translateX(-150%);
+}
+.navbar ul li + li + li {
+  margin-left: 30px;
+  transform: translateX(-200%);
+}
+.container.show-nav + nav li {
+  transform: translateX(0);
+  transition-delay: 0.4s;
+}
+.content {
+  max-width: 1000px;
+  max-height: 1000px;
+  margin: 0 auto;
+}
+.content small {
+  font-style: italic;
+  color: #222;
+}
+.content h1 {
+  margin-bottom: 0;
+}
+.content p {
+  font-size: 16px;
+  color: #333;
+  line-height: 1.5;
+}
